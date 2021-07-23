@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang = "en">
+  <head>
+    <meta charset  = "utf-8">
+    <meta name     = "viewport" content       = "width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+    <meta name     = "keywords" content       = "IPv4, IPv6, ISP, IP address, ip4u.live, ip4u, Internet facts, Browser version">
+    <meta name     = "description" content    = "Another good looking website which shows and informs you about IP address.">
+    <meta property = "og:description" content = "Another good looking website which shows and informs you about IP address.">
+    <link rel      = "stylesheet" href        = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity = "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin = "anonymous">
+    <link rel      = "stylesheet" href        = "https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+    <meta property = "og:title" content       = "IP4U: Your IP Address!">
+	<title>IP4U: Your IP Address!</title>
+	<script src            = "https://code.jquery.com/jquery-3.5.1.js" integrity                                = "sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin                     = "anonymous"></script>	<script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity = "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin = "anonymous"></script>
+	<script src            = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity = "sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin = "anonymous"></script>
+	<script src            = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity   = "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin = "anonymous"></script>
+	<script async src      = "https://www.googletagmanager.com/gtag/js?id=UA-114126809-2"></script>
+	<script data-ad-client = "ca-pub-7725195141313368" async src                                                = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<link   rel            = "canonical" href                                                                   = "index.html">
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-114126809-2');
+
+	$(function () {
+	$('[data-toggle="popover"]').popover()
+	})
+	$('.popover-dismiss').popover({
+	trigger: 'focus'
+	})
+	function startTime() {
+	var                     today                    = new Date();
+	var                     h                        = today.getHours();
+	var                     m                        = today.getMinutes();
+	var                     s                        = today.getSeconds();
+	                        m                        = checkTime(m);
+	                        s                        = checkTime(s);
+	                        n                        = new Date();
+	                        yy                       = n.getFullYear();
+	                        mm                       = n.getMonth() + 1;
+	                        dd                       = n.getDate();
+	document.getElementById('sysdatetime').innerHTML = 
+	mm + "/" + dd + "/" + yy + " " + h + ":" + m + ":" + s;
+	var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+	if (i < 10) {i = "0" + i};
+	return i;
+	}
+
+	var nVer         = navigator.appVersion;
+	var nAgt         = navigator.userAgent;
+	var browserName  = navigator.appName;
+	var fullVersion  = ''+parseFloat(navigator.appVersion);
+	var majorVersion = parseInt(navigator.appVersion,10);
+	var nameOffset,verOffset,ix;
+	if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+	browserName = "Opera";
+	fullVersion = nAgt.substring(verOffset+6);
+	if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+		fullVersion = nAgt.substring(verOffset+8);
+	}
+	else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+	browserName = "Microsoft Internet Explorer";
+	fullVersion = nAgt.substring(verOffset+5);
+	}
+	else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+	browserName = "Chrome";
+	fullVersion = nAgt.substring(verOffset+7);
+	}
+	else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+	browserName = "Safari";
+	fullVersion = nAgt.substring(verOffset+7);
+	if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+		fullVersion = nAgt.substring(verOffset+8);
+	}
+	else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+		browserName = "Firefox";
+		fullVersion = nAgt.substring(verOffset+8);
+	}
+	else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < (verOffset=nAgt.lastIndexOf('/')) ) {
+		browserName = nAgt.substring(nameOffset,verOffset);
+		fullVersion = nAgt.substring(verOffset+1);
+		if (browserName.toLowerCase()==browserName.toUpperCase()) {
+		browserName = navigator.appName;
+		}
+	}
+	if ((ix=fullVersion.indexOf(";"))!=-1)
+		fullVersion = fullVersion.substring(0,ix);
+	if ((ix=fullVersion.indexOf(" "))!=-1)
+		fullVersion = fullVersion.substring(0,ix);
+
+	majorVersion = parseInt(''+fullVersion,10);
+	if (isNaN(majorVersion)) {
+		fullVersion  = ''+parseFloat(navigator.appVersion);
+		majorVersion = parseInt(navigator.appVersion,10);
+	}
+</script>
+    <link href = "cover.css" rel = "stylesheet">
+  </head>
+  <body onload = "startTime()">
+  <nav  class  = "navbar navbar-expand-lg navbar-dark bg-dark">
+  <a    class  = "navbar-brand" >ip4u.live</a>
+
+  <div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+  <ul  class = "navbar-nav mr-auto">
+   <!--<li  class = "nav-item active">
+   <a   class = "nav-link" href               = "https://ip4u.live">Home</a> 
+  <a   class = 
+      </li>-->
+<!-- <li class = "nav-item">
+<a   class     = "nav-link" href = "#">Link</a>
+      </li>
+      <li class = "nav-item dropdown">
+      <a  class = "nav-link dropdown-toggle" href = "#" id = "navbarDropdown" role = "button" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false">
+          Dropdown
+        </a>
+        <div class = "dropdown-menu" aria-labelledby = "navbarDropdown">
+        <a   class = "dropdown-item" href            = "#">Action</a>
+        <a   class = "dropdown-item" href            = "#">Another action</a>
+        <div class = "dropdown-divider"></div>
+        <a   class = "dropdown-item" href            = "#">Something else here</a>
+        </div>
+      </li> -->
+    </ul>
+
+  </div>
+</nav>
+  <script async src="https://cse.google.com/cse.js?cx=57c77f96845695748"></script>
+  <div class="gcse-search"></div>
+  <main role = "main" class = "inner cover text-center">
+
+    <h1         class = "cover-heading">Your public IP Address (IPv4):</h1>
+    <div        class = "alert alert-primary">
+    <p          class = "copy lead" id              = "ip4" role = "alert"></p></div>
+    <button     type  = "button" class              = "btn btn-primary btn-lg copy-ip4">Copy your IPv4address.</button><br><hr><br>
+    <blockquote class = "blockquote">
+    <p          class = "mb-0">An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing.</p>
+		</blockquote>
+
+		<button type  = "submit"  class = "btn btn-outline-success" onClick = "refreshPage()">Refresh the page</button>
+		<div    style = "overflow-x:auto;">
+		<table  class = "table table-borderless">
+	<tr>
+		<td class   = "headem">Browser:</td>
+		<td colspan = "2"><script>document.write(browserName+" "+fullVersion)</script></td>
+	</tr>
+	<tr>
+		<td class   = "headem">Date and Time:</td>
+		<td colspan = "2" id = "sysdatetime"></td>
+	</tr>
+<!--	<tr>
+		<td class   = "headem">Country:</td>
+		<td colspan = "2" id = "country"></td>
+	</tr>
+	<tr>
+		<td class   = "headem">Country Capital:</td>
+		<td colspan = "2" id = "capital"></td>
+	</tr>
+	<tr>
+		<td class   = "headem">Timezone Name:</td>
+		<td colspan = "2" id = "timezone"></td>
+	</tr>
+	<tr>
+		<td class   = "headem">Currency:</td>
+		<td colspan = "2" id = "currency"></td>
+	</tr> -->
+</table>
+<hr>
+<table class = "table table-borderless">
+  <tbody>
+    <tr>
+		<td      class        = "headem">IPv6</td>
+		<td      id           = "ip6"></td>
+		<td><!-- <button type = "button" class = "btn btn-primary copy-ip6">Copy your IPv6address.</button> --> <button type = "button" class = "btn btn-danger" data-toggle = "popover" data-trigger = "focus title="Why IPV4 = IPV6 here?" data-content="This might be because your network does not support IPv6 address">Trouble? IPv6 is same as IPv4?</button></td>
+	</tr>
+</table><hr>
+
+</div>
+		<script>
+			$.getJSON("https://api.ipify.org?format=json", 
+										function(data) { 
+			$("#ip4").html(data.ip); 
+		})
+			$.getJSON("https://api6.ipify.org?format=json", 
+										function(data) { 
+			$("#ip6").html(data.ip); 
+		})
+/**			$.getJSON("https://ipwhois.app/json/", 
+										function(data) { 
+			$("#isp").html(data.isp); 
+		})
+			$.getJSON("https://ipwhois.app/json/", 
+										function(data) { 
+			$("#capital").html(data.country_capital); 
+		})
+			$.getJSON("https://ipwhois.app/json/", 
+										function(data) { 
+			$("#country").html(data.country); 
+		})
+			$.getJSON("https://ipwhois.app/json/", 
+										function(data) { 
+			$("#timezone").html(data.timezone_name); 
+		})
+			$.getJSON("https://ipwhois.app/json/", 
+										function(data) { 
+			$("#currency").html(data.currency); 
+		})
+**/
+		function copyToClipboard(element) {
+            var $temp   = $("<textarea>");
+            var brRegex = /<br\s*[\/]?>/gi;
+                $("body").append($temp);
+                $temp.val($(element).html().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim()).select();
+                document.execCommand("copy");
+                $temp.remove();
+			var brRegexDup = /<br\s*[\/]?>/gi;
+                $("body").append($temp);
+                $temp.val($(element).html().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim()).select();
+                document.execCommand("copyip6");
+                $temp.remove();
+            }
+            $('.copy-ip4').on('click', _ => {
+                copyToClipboard($('.copy'));
+            });
+			
+            $('.copy-ip6').on('click', _ => {
+                copyToClipboard($('.copyip6'));
+            });			
+
+		var                     cookieed                = navigator.cookieEnabled;
+		document.getElementById("iscookieed").innerHTML = cookieed;
+
+		function refreshPage(){
+			window.location.reload();
+		} 
+        </script>
+</div>
+  </main>
+	<script src   = "https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+	<footer class = "footer mt-auto py-3 text-center">
+
+<div    class = "container">
+<span   class = "text-muted ">ip4u.live</span>
+</div>
+</footer>
+</body>
+</html>

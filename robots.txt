@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /img/
+Disallow: /cover.css
+
+Sitemap: https://www.ip4u.live/sitemap.xml
